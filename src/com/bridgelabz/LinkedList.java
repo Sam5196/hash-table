@@ -1,9 +1,9 @@
 package com.bridgelabz;
 
+
 public class LinkedList<K> {
     private Node<K> head;
     private Node<K> tail;
-
     public Node<K> search(K key) {
 
         Node<K> temp = head;
@@ -18,7 +18,6 @@ public class LinkedList<K> {
     }
     public void append(Node<K> myNode) {
 
-
         if (this.head == null) {
             this.head = myNode;
         }
@@ -29,7 +28,6 @@ public class LinkedList<K> {
             this.tail = myNode;
         }
     }
-
     public String toString() {
         return "\n MyLinkedListNodes{" + head + "}";
     }

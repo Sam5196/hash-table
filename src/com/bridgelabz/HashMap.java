@@ -13,7 +13,6 @@ public class HashMap<K, V> {
             arrayList.add(null);
         }
     }
-
     public V get(K key) {
 
         int indexNumber = this.getIndexNumber(key);
@@ -50,7 +49,6 @@ public class HashMap<K, V> {
         }
     }
 
-    @Override
     public String toString() {
         return "HashMap{" + arrayList + '}';
     }

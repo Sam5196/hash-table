@@ -10,6 +10,7 @@ public class MyMapNode<K, V> implements Node<K> {
         this.value = value;
         this.next = null;
     }
+
     public K getKey() {
         return key;
     }
@@ -26,18 +27,14 @@ public class MyMapNode<K, V> implements Node<K> {
         this.value = value;
     }
 
-
     public Node<K> getNext() {
         return next;
     }
-
-
     public void setNext(Node<K> next) {
 
         this.next = next;
 
     }
-
     public String toString() {
         StringBuilder myMapNodeString = new StringBuilder();
         myMapNodeString.append("MyMapNode{" + "K=").append(key).append(" V=").append(value).append('}');

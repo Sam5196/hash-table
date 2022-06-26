@@ -24,13 +24,11 @@ public class HashMap<K, V> {
         MyMapNode<K, V> mapNode = (MyMapNode<K, V>) linkedList.search(key);
         return mapNode == null ? null : mapNode.getValue();
     }
-
     private int getIndexNumber(K key) {
 
         int hashCode = Math.abs(key.hashCode());
         return hashCode % this.sizeOfArray;
     }
-
     public void add(K key, V value) {
 
         int index = this.getIndexNumber(key);
@@ -48,7 +46,19 @@ public class HashMap<K, V> {
             myMapNode.setValue(value);
         }
     }
+    public boolean remove(K key) {
 
+        int index = this.getIndexNumber(key);
+        LinkedList<K> linkedList = this.arrayList.get(index);
+
+        MyMapNode<K, V> myMapNode = (MyMapNode<K, V>) linkedList.search(key);
+
+        linkedList.remove(key);
+        arrayList.remove(index);
+        return true;
+    }
+
+    @Override
     public String toString() {
         return "HashMap{" + arrayList + '}';
     }
